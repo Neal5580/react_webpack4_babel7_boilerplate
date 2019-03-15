@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import Input from "../presentational/Input.jsx";
 import "./FormContainer.css";
+import { observer } from "mobx-react";
+
+@observer
 class FormContainer extends Component {
   constructor() {
     super();
