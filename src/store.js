@@ -1,4 +1,4 @@
-import { observable, action } from "mobx";
+import { observable, action, computed } from "mobx";
 class Store {
   @observable title = "Mobx, Bebal 7, WebPack 4, React 16.8";
   @observable isDisplay = true;
@@ -16,5 +16,9 @@ class Store {
   @action setTitle = value => {
     this.title = value;
   };
+
+  @computed get numberOfWords() {
+    return this.title.length;
+  }
 }
 export default Store;

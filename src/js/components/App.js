@@ -18,10 +18,14 @@ class App extends Component {
   }
 
   render() {
-    const { isDisplay, title } = this.props.store;
+    const { isDisplay, title, numberOfWords } = this.props.store;
     return (
       <div>
         <DevTools />
+        <Title />
+        <hr />
+        <span>Number of Characters: {numberOfWords}</span>
+        <hr />
         <span>Is Display?</span>
         <input
           type="checkbox"
@@ -36,7 +40,6 @@ class App extends Component {
           onChange={this.handleInput.bind(this)}
         />
         <hr />
-        <Title />
       </div>
     );
   }
