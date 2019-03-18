@@ -7,7 +7,8 @@ import Title from "./Title";
 @observer
 class App extends Component {
   handleChange(event) {
-    this.props.store.updateCheck();
+    const { updateCheck } = this.props.store;
+    updateCheck();
   }
 
   render() {
