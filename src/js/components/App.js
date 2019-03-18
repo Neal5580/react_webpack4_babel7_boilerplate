@@ -20,7 +20,7 @@ class App extends Component {
   render() {
     const { isDisplay, title, numberOfWords } = this.props.store;
     return (
-      <div>
+      <div style={{ width: "800px", margin: "auto", textAlign: "center" }}>
         <DevTools />
         <Title />
         <hr />
